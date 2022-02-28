@@ -1,7 +1,7 @@
 import { Specification } from "../../entities/Specification";
 import { ISpecificationsRepository, ICreateSpecificationDTO } from "../ISpecificationsRepository";
 
-class SpecificationsReposity implements ISpecificationsRepository {
+class SpecificationsRepository implements ISpecificationsRepository {
   private specifications: Specification[]
 
   constructor () {
@@ -26,4 +26,4 @@ class SpecificationsReposity implements ISpecificationsRepository {
   }
 }
 
-export { SpecificationsReposity }
+export { SpecificationsRepository }
