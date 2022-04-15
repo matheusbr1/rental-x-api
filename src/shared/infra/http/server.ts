@@ -1,11 +1,11 @@
 import express, { NextFunction, Request, Response } from 'express'
 import "express-async-errors"
-import "./database"
-import "./shared/container"
-import { router } from './routes'
+import "@shared/infra/typeorm" // Database
+import "@shared/container"
 import swaggerUI from 'swagger-ui-express'
-import swaggerFile from './swagger.json'
-import { AppError } from './errors/AppError'
+import swaggerFile from '../../../swagger.json'
+import { router } from './routes'
+import { AppError } from '@shared/errors/AppError'
 
 const app = express()
 
