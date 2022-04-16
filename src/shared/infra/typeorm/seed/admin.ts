@@ -12,7 +12,7 @@ async function create() {
       values('${id}', 'admin', 'email@admin.com.br', '${password}', true, 'now()', 'xxxxxx')
   `)
 
-  await connection.close;
+  await connection.close();
 }
 
 create().then(() => console.log('User admin created'))

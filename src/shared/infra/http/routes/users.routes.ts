@@ -15,11 +15,10 @@ const updateUserAvatarController = new UpdateUserAvatarController()
 
 usersRoutes.post('/', createUserController.handle)
 
-// Usando o multer como um middleware
 usersRoutes.patch(
   '/avatar', 
-  ensureAuthenticated,
-  uploadAvatar.single('avatar'), 
+  ensureAuthenticated, // Verificando se está logado
+  uploadAvatar.single('avatar'),  // Usando o multer como um middleware
   updateUserAvatarController.handle
 )
 
