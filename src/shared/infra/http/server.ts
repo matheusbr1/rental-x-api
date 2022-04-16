@@ -1,11 +1,14 @@
 import express, { NextFunction, Request, Response } from 'express'
 import "express-async-errors"
-import "@shared/infra/typeorm" // Database
+import createConnection from "@shared/infra/typeorm" // Database
 import "@shared/container"
 import swaggerUI from 'swagger-ui-express'
 import swaggerFile from '../../../swagger.json'
 import { router } from './routes'
 import { AppError } from '@shared/errors/AppError'
+
+// Criando conexão com o banco de dados
+createConnection()
 
 const app = express()
 
