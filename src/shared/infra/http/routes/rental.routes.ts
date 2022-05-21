@@ -1,12 +1,14 @@
 import { CreateCarRentalsController } from '@modules/rentals/useCases/createRental/CreateRentalController'
 import { DevolutionRentalController } from '@modules/rentals/useCases/devolutionRental/DevolutionRentalController'
+import { ListRentalsByUserController } from '@modules/rentals/useCases/listRentalsByUser/listRentalsByUserController'
 import { Router } from 'express'
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated'
 
 const rentalRoutes = Router()
 
 const createRentalController = new CreateCarRentalsController()
-const devolutionRentalUseCase = new DevolutionRentalController()
+const devolutionRentalController = new DevolutionRentalController()
+const listRentalsByUserController = new ListRentalsByUserController()
 
 rentalRoutes.post(
   '/', 
@@ -17,7 +19,13 @@ rentalRoutes.post(
 rentalRoutes.post(
   '/devolution/:id', 
   ensureAuthenticated,
-  devolutionRentalUseCase.handle
+  devolutionRentalController.handle
+)
+
+rentalRoutes.get(
+  '/user', 
+  ensureAuthenticated,
+  listRentalsByUserController.handle
 )
 
 export { rentalRoutes }
