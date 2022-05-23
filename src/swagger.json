@@ -196,6 +196,7 @@
           "type": "string"
         }
       }
+    },
     "Car": {
       "type": "object",
       "properties": {
