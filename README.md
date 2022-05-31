@@ -33,6 +33,14 @@ $ npm run dev
 
 ### Email
 
+The application send a email for password recovery 
+
+I used the following tools:
+
+Fake SMTP service: <a href='https://ethereal.email/' > Ethereal </a>
+
+Template engine: <a href='https://handlebarsjs.com/'> handlebars </a>
+
 <hr />
 
 ### Deployment
