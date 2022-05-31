@@ -1,5 +1,11 @@
 # RentX API
 
+<br />
+
+<img src="https://i.imgur.com/oUAKMC5.png" />
+
+<br />
+
 Project developed in the Ignite course of <a href="https://rocketseat.com.br/" >Rocketseat</a> 🚀
 
 <hr />
