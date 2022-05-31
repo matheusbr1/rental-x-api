@@ -1,5 +1,11 @@
 # RentX API
 
+<br />
+
+<img src="https://i.imgur.com/oUAKMC5.png" />
+
+<br />
+
 Project developed in the Ignite course of <a href="https://rocketseat.com.br/" >Rocketseat</a> 🚀
 
 <hr />
@@ -32,6 +38,14 @@ $ npm run dev
 <hr />
 
 ### Email
+
+The application send a email for password recovery 
+
+I used the following tools:
+
+Fake SMTP service: <a href='https://ethereal.email/' > Ethereal </a>
+
+Template engine: <a href='https://handlebarsjs.com/'> handlebars </a>
 
 <hr />
 
