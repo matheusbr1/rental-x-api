@@ -31,7 +31,7 @@ container.registerSingleton<ISpecificationsRepository>(
 
 // IUsersRepository
 container.registerSingleton<IUsersRepository>(
-  'UserRepository',
+  'UsersRepository',
   UsersRepository
 )
 

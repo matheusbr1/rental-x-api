@@ -10,7 +10,7 @@ import { resolve } from 'path'
 @injectable()
 class SendForgotPasswordMailUseCase {
   constructor (
-    @inject('UserRepository')
+    @inject('UsersRepository')
     private usersRepository: IUsersRepository, 
     @inject('UsersTokensRepository')
     private usersTokensRepository: IUsersTokensRepository,

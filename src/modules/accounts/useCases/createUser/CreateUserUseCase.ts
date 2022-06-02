@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { hash } from "bcrypt";
+import { hash } from "bcryptjs";
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
 import { AppError } from "@shared/errors/AppError";
@@ -7,7 +7,7 @@ import { AppError } from "@shared/errors/AppError";
 @injectable()
 class CreateUserUseCase {
   constructor (
-    @inject('UserRepository')
+    @inject('UsersRepository')
     private usersRepository: IUsersRepository
   ) {}
 
@@ -19,10 +19,10 @@ class CreateUserUseCase {
       throw new AppError('User already exists')
     }
 
-    // const passwordHash = await hash(password, 8)
+    const passwordHash = await hash(password, 8)
 
     await this.usersRepository.create({
-      name, email, driver_license, password
+      name, email, driver_license, password: passwordHash
     })
   }
 }
