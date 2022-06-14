@@ -27,6 +27,8 @@ $ npm run dev
 
 ### Authentication
 
+I used the <a href="https://jwt.io/" > JWT (JSON Web Token) </a> into auth routes with a refresh token strategy
+
 <hr />
 
 ### Documentation
