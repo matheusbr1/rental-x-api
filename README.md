@@ -37,11 +37,19 @@ I used <a href='https://swagger.io/' >swagger </a> to document the application's
 
 You can run the application and access the docs in the http://localhost:3333/api-docs/
 
-![image](https://user-images.githubusercontent.com/28275815/173966847-0921f971-55a0-47ae-a402-7d9d4d28c785.png)
-
 <hr />
 
 ### Tests
+
+I Used <a href='https://jestjs.io/' >Jest</a> as a test framework to test the application.
+
+You can run tests with this command:
+
+<pre>
+  yarn test
+</pre>
+
+When you run the tests, a coverage is created, you can open in the browser to see more detais about each file
 
 <hr />
 
