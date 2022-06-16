@@ -8,6 +8,8 @@
 
 Project developed in the Ignite course of <a href="https://rocketseat.com.br/" >Rocketseat</a> 🚀
 
+This backend was built with <a href="https://nodejs.org/en">NodeJS</a> and <a href="https://www.typescriptlang.org/">Typescript</a> ❤️
+
 <hr />
 
 ### For execute in your machine ☕
@@ -66,15 +68,6 @@ Template engine: <a href='https://handlebarsjs.com/'> handlebars </a>
 <hr />
 
 ### Deployment
-
-<hr />
-
-### Built with
-<ul>
-  <li><a href="https://nodejs.org/en">NodeJS</a></li>
-  <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-  <li><a href="https://jestjs.io/">JestJS</a></li>
-</ul>
 
 <hr />
 
