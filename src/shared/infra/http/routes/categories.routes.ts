@@ -10,7 +10,7 @@ import { ensureAdmin } from '../middlewares/ensureAdmin'
 const categoriesRoutes = Router()
 
 // O multer é o resposável por receber os arquivos
-const upload = multer(uploadConfig.upload('./tmp'))
+const upload = multer(uploadConfig)
 
 const createCategoryController = new CreateCategoryController()
 const importCategoryController = new ImportCategoryController()

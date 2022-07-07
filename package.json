@@ -24,6 +24,7 @@
     "@types/jest": "^27.4.1",
     "@types/supertest": "^2.0.12",
     "@types/uuid": "^8.3.3",
+    "aws-sdk": "^2.1169.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "csv-parse": "^5.0.3",

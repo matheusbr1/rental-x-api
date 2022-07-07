@@ -18,7 +18,7 @@ const createCarSpecificationsController = new CreateCarSpecificationController()
 const uploadCarImagesController = new UploadCarImagesController()
 
 // O multer é o resposável por receber os arquivos
-const upload = multer(uploadConfig.upload('./tmp/cars'))
+const upload = multer(uploadConfig)
 
 carRoutes.post(
   '/', 
