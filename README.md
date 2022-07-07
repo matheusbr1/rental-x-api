@@ -69,6 +69,8 @@ Template engine: <a href='https://handlebarsjs.com/'> handlebars </a>
 
 ### Deployment
 
+I used the S3 AWS to storage the images on cloud.
+
 <hr />
 
 ### Features
