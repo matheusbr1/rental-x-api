@@ -8,6 +8,8 @@
 
 Project developed in the Ignite course of <a href="https://rocketseat.com.br/" >Rocketseat</a> 🚀
 
+This backend was built with <a href="https://nodejs.org/en">NodeJS</a> and <a href="https://www.typescriptlang.org/">Typescript</a> ❤️
+
 <hr />
 
 ### For execute in your machine ☕
@@ -37,11 +39,19 @@ I used <a href='https://swagger.io/' >swagger </a> to document the application's
 
 You can run the application and access the docs in the http://localhost:3333/api-docs/
 
-![image](https://user-images.githubusercontent.com/28275815/173966847-0921f971-55a0-47ae-a402-7d9d4d28c785.png)
-
 <hr />
 
 ### Tests
+
+I Used <a href='https://jestjs.io/' >Jest</a> as a test framework to test the application.
+
+You can run tests with this command:
+
+<pre>
+  yarn test
+</pre>
+
+When you run the tests, a coverage is created, you can open in the browser to see more detais about each file
 
 <hr />
 
@@ -59,14 +69,7 @@ Template engine: <a href='https://handlebarsjs.com/'> handlebars </a>
 
 ### Deployment
 
-<hr />
-
-### Built with
-<ul>
-  <li><a href="https://nodejs.org/en">NodeJS</a></li>
-  <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-  <li><a href="https://jestjs.io/">JestJS</a></li>
-</ul>
+I used the S3 AWS to storage the images on cloud.
 
 <hr />
 
