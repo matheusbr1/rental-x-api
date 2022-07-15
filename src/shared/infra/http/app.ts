@@ -9,6 +9,7 @@ import swaggerUI from 'swagger-ui-express'
 import swaggerFile from '../../../swagger.json'
 import { router } from './routes'
 import { AppError } from '@shared/errors/AppError'
+import upload from '@config/upload'
 
 // Criando conexão com o banco de dados
 createConnection()
@@ -16,6 +17,9 @@ createConnection()
 const app = express()
 
 app.use(express.json())
+
+app.use('/avatar', express.static(`${upload.tmpFolder}/avatar`))
+app.use('/cars', express.static(`${upload.tmpFolder}/cars`))
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerFile))
 
