@@ -2,4 +2,5 @@
 /coverage
 tmp
 .env
+dist
 yarn-error.log
