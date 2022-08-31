@@ -1,6 +1,7 @@
 
 import 'reflect-metadata'
 import 'dotenv/config'
+import cors from 'cors'
 import express, { NextFunction, Request, Response } from 'express'
 import "express-async-errors"
 import createConnection from "@shared/infra/typeorm" // Database
@@ -15,6 +16,8 @@ import upload from '@config/upload'
 createConnection()
 
 const app = express()
+
+app.use(cors())
 
 app.use(express.json())
 
