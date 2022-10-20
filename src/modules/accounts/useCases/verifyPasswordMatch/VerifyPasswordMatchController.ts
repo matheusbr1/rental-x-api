@@ -10,9 +10,11 @@ class VerifyPasswordMatchController {
 
     const verifyPasswordMatchUseCase = container.resolve(VerifyPasswordMatchUseCase)
 
-    await verifyPasswordMatchUseCase.execute(id, password)
+    const isCorrect = await verifyPasswordMatchUseCase.execute(id, password)
 
-    return response.status(204).send()
+    return response.status(200).json({
+      isCorrect
+    })
   }
 }
 

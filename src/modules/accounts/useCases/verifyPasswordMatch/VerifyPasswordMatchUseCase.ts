@@ -10,7 +10,7 @@ class VerifyPasswordMatchUseCase {
     private usersRepository: IUsersRepository,
   ) {}
 
-  async execute(id: string, password: string): Promise<void> {
+  async execute(id: string, password: string): Promise<boolean> {
     const user = await this.usersRepository.findById(id)
 
     if (!user) {
@@ -19,9 +19,7 @@ class VerifyPasswordMatchUseCase {
 
     const passwordMatch = await compare(password, user.password)
 
-    if(!passwordMatch) {
-      throw new AppError('Password incorrect')
-    }
+    return Boolean(passwordMatch)
   } 
 }
 
