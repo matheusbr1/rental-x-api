@@ -19,7 +19,10 @@ class ListRentalsByUserUseCase {
 
     const mapped = rentals.map(rental => ({
       ...rental,
-      car: rental.car.images.map(image => ImageMap.toDTO(image))
+      car: {
+        ...rental.car,
+        images: rental.car.images.map(image => ImageMap.toDTO(image))
+      } 
     })) as any
 
     return mapped
