@@ -54,7 +54,7 @@ class CarsRepository implements ICarsRepository {
     const carsQuery = await this.repository
       .createQueryBuilder("c")
       .where("available = :available", { available: true })
-      .leftJoinAndSelect("c.images", "images")
+      .leftJoinAndSelect("c.images", "i")
 
       if (brand) {
         carsQuery.andWhere("c.brand = :brand", { brand })

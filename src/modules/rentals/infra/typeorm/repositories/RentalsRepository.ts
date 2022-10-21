@@ -52,11 +52,23 @@ class RentalsRepository implements IRentalsRepository {
     return rental
   }
 
+  // async findByUser(user_id: string): Promise<Rental[]> {
+  //   const rentals = await this.repository.find({
+  //     where: { user_id },
+  //     relations: ["car"],
+  //   })
+
+  //   return rentals
+  // }
+
   async findByUser(user_id: string): Promise<Rental[]> {
-    const rentals = await this.repository.find({
-      where: { user_id },
-      relations: ["car"]
-    })
+    const rentalsQuery = await this.repository
+      .createQueryBuilder('r')
+      .leftJoinAndSelect('r.car', 'c')
+      .leftJoinAndSelect('c.images', 'i')
+      .where("r.user_id = :id", { id: user_id })  
+
+    const rentals = await rentalsQuery.getMany()
 
     return rentals
   }

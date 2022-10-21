@@ -1,3 +1,4 @@
+import { ImageMap } from "@modules/cars/mapper/ImageMap";
 import { Rental } from "@modules/rentals/infra/typeorm/entities/Rental";
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 import { inject, injectable } from "tsyringe";
@@ -14,9 +15,14 @@ class ListRentalsByUserUseCase {
   ) {}
 
   async execute({ user_id }: IRequest): Promise<Rental[]> {
-    const rental = await this.rentalsRepository.findByUser(user_id)
+    const rentals = await this.rentalsRepository.findByUser(user_id)
 
-    return rental
+    const mapped = rentals.map(rental => ({
+      ...rental,
+      car: rental.car.images.map(image => ImageMap.toDTO(image))
+    })) as any
+
+    return mapped
   }
 }
 
