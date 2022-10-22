@@ -55,6 +55,7 @@ class CarsRepository implements ICarsRepository {
       .createQueryBuilder("c")
       .where("available = :available", { available: true })
       .leftJoinAndSelect("c.images", "i")
+      .leftJoinAndSelect("c.specifications", "s")
 
       if (brand) {
         carsQuery.andWhere("c.brand = :brand", { brand })
